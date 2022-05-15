@@ -23,19 +23,20 @@
       text-align: center;
       font-family: 'Londrina Outline', cursive;
       cursor: pointer;
-      @media (min-width: $layout-breakpoint-medium) {
+      @media (max-width: $layout-breakpoint-medium) {
        position: absolute;
-       top: 50%;
+       top: 50vh;
        left: 0;
+       transform: rotate(10deg);
       }
 
       &:after {
         content: 'Terminalen';
         position: absolute;
         font-family: 'Roboto Flex', sans-serif;
-        font-size: 2rem;
-        text-shadow: 0px 0px 2px black;
-        color: transparent;
+        font-size: 10rem;
+        color: #fb3d00;
+        text-shadow: 1px 1px 1px black;
         top: 3rem;
         left: .3rem;
       }
@@ -91,6 +92,7 @@
         @media (max-width: $layout-breakpoint-medium) {
           position: absolute;
           top: 0;
+          padding-left: 0;
           right: 0;
           left: auto;
           z-index: 10;
@@ -112,9 +114,10 @@
             text-align: right;
            font-size: 2rem;
            color: #fb3d00;
+           filter: drop-shadow(1px 1px 1px rgba(0,0,0,.885));
            padding: 0;
            margin: 0;
-           background-color: rgba(0, 0, 0, 0.342);
+           background-color: rgba(0, 0, 0, 0.089);
          &:first-child {
            padding-top: 10rem;
          }
