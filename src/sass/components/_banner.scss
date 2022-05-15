@@ -1,0 +1,183 @@
+
+.banner {
+  z-index: 100;
+  font-family: 'Roboto Flex', sans-serif;
+  position: relative;
+  .banner-row {
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 2rem 4rem;
+    
+
+    @media (max-width: $layout-breakpoint-medium) {
+      &:first-child {
+        margin-top: 48px;
+        padding: 1rem 0;
+      }
+    }
+    &.center {
+      position: relative;
+      justify-content: flex-start;
+      text-align: center;
+      font-family: 'Londrina Outline', cursive;
+      cursor: pointer;
+      @media (min-width: $layout-breakpoint-medium) {
+       position: absolute;
+       top: 50%;
+       left: 0;
+      }
+
+      &:after {
+        content: 'Terminalen';
+        position: absolute;
+        font-family: 'Roboto Flex', sans-serif;
+        font-size: 2rem;
+        text-shadow: 0px 0px 2px black;
+        color: transparent;
+        top: 3rem;
+        left: .3rem;
+      }
+      .row-letter {
+        left: 2rem;
+        
+      }
+    }
+    &.right {
+      justify-content: flex-end;
+    }
+
+    .row-title,
+    .row-letter {
+      font-size: 16rem;
+      font-weight: 600;
+      position: relative;
+      letter-spacing: -0.8rem;
+      display: inline-block;
+      white-space: nowrap;
+      cursor: pointer;
+      @media (max-width: $layout-breakpoint-medium) {
+        font-size: 6rem;
+        background: black;
+        color: #fb3d00;
+        text-shadow: 1px 1px 2px black;
+      }
+    }
+    .row-col {
+      width: 100%;
+      height: 500px;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      @media (max-width: $layout-breakpoint-medium) {
+        width: 100%;
+        height: fit-content;
+      }
+      @media (min-width: $layout-breakpoint-xsmall) {
+        width: 100%;
+        height: fit-content;
+        justify-content: flex-start;
+      }
+      .row-message {
+        position: relative;
+        padding-top: 10rem;
+        padding-left: 10rem;
+        font-size: 1.8rem;
+        line-height: 4rem;
+        width: 320px;
+        cursor: pointer;
+
+        @media (max-width: $layout-breakpoint-medium) {
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: auto;
+          z-index: 10;
+          text-shadow: 1px 1px 1px #141414;
+          padding-top: 0;
+          max-width: 100%;
+          z-index: 200;
+        }
+
+
+        h3 {
+          text-align: left;
+          font-size: 4rem;
+          font-weight: 800;
+          color: #000;
+          text-shadow: 1px 1px 1px #fb3d00;
+
+          @media (max-width: $layout-breakpoint-xsmall) {
+            text-align: right;
+           font-size: 2rem;
+           color: #fb3d00;
+           padding: 0;
+           margin: 0;
+           background-color: rgba(0, 0, 0, 0.342);
+         &:first-child {
+           padding-top: 10rem;
+         }
+          }
+        }
+      }
+    }
+    .scroll {
+      height: 160px;
+      width: 160px;
+      border-radius: 100%;
+      background: #fff;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      left: 160px;
+      @media (max-width: $layout-breakpoint-medium) {
+        left: 60px;
+      }
+      @media (max-width: 1240px) {
+        display: none;
+      }
+      span {
+        font-size: 18px;
+        font-weight: 600;
+        margin: 4px 0;
+        @media (max-width: $layout-breakpoint-xsmall) {
+          font-size:10px;
+          margin: 2px 0;
+        }
+      }
+    }
+  }
+}
+
+.transition-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 800px;
+    display: flex;
+  }
+  &.final {
+    display: block;
+    top: -128px;
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    z-index: -100;
+    @media (max-width: $layout-breakpoint-xsmall) {
+      top: -36px;
+    }
+    img {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}

@@ -1,23 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,600;8..144,800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
 
-
-
 *, *:before, *:after, html, body {
   padding: 0;
   box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto Flex', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Londrina Outline'
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  max-width: 100%;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-color: #fb3d00;
+  overflow-x: hidden;
+
+  &:before {
+    animation: grain 12s steps(30) infinite;
+   background-image: url('./images/StreetArtMarket.JPG');
+    content: "";
+    height: 200%;
+    left: -20%;
+    opacity: 0.3;
+    position: fixed;
+    top: -50%;
+    width: 200%;
+
+    @media (max-width: 768px) {
+      position: absolute;
+      max-width: 100vw;
+      top: 40%;
+      left: 0;
+     }
+  }
+  &.no-scroll {
+    overflow-y: hidden;
+  }
 }
 
+@keyframes grain {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  20% {
+    transform: translate(-15%, 5%);
+  }
+  30% {
+    transform: translate(7%, -25%);
+  }
+  40% {
+    transform: translate(-5%, 25%);
+  }
+  50% {
+    transform: translate(-15%, 10%);
+  }
+  60% {
+    transform: translate(15%, 0%);
+  }
+  70% {
+    transform: translate(0%, 15%);
+  }
+  80% {
+    transform: translate(3%, 35%);
+  }
+  90% {
+    transform: translate(-10%, 10%);
+  }
+}
 
 
