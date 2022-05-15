@@ -1,38 +1,115 @@
 
+
+$red: #f13303fb;
+$black: #282828;
 .App {
+  position: relative;
   text-align: center;
   width: 100%;
   min-height: 100vh;
-  background-color: #f13303fb;
+  height: 100%;
+  background-color: $red;
+  overflow-x: hidden;
 
 }
 
 h1 {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
   font-family: 'Open Sans', sans-serif;
   font-weight: 800;
   font-size: 2rem;
   padding: 0.5rem 1rem;
+  color: $red;
+  background-color: $black;
 }
 
-h1 {
-  &.special {
-    margin: 0;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 800;
-    font-size: 5rem;
-    background: black;
-  padding: 2rem 4rem;
-  color: #f13303fb;
-  }
- 
- 
+.info-container {
+  position: absolute;
+  z-index: 40;
+  display: block;
+  right: 0;
+  top: 40%;
+  width: fit-content;
+  background: rgba(0, 0, 0, 0.493);
+  padding: 1rem 4rem 0 0;
+  text-align: left;
 }
 
-ul {
-  list-style-type: none;
+h2 {
+  color: $red;
+  padding: 0 0 0 0.5rem;
+}
+
+.names-array {
   position: absolute;
   left: 0;
+  top: 0;
+  text-align: center;
+  width: 200px;
+}
+
+
+.mid-lists{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+.street-list {
+  list-style-type: none;
+  position: relative;
+  z-index: 10;
+  &:first-of-type {
+   
+    z-index: -1;
+  }
+  li {
+    padding: 1rem 0;
+    transform: rotate(-1deg) skewX(5deg);
+
+
+    h3 {
+        margin: 0;
+        font-family: 'Roboto Flex', sans-serif;
+        font-size: 2rem;
+        padding: 0.25rem 0.75rem;
+        background: black;
+        color: #f13303fb;
+
+        @media screen and (max-width: 768px) {
+         font-size: 1.5rem;
+        }
+       
+      }
+  }
+  
+  
+}
+
+
+.logo {
+position: fixed;
+left: -3rem;
+top: 5rem;
+z-index: 5;
+@media screen and (max-width: 768px) {
+  left: 2rem;
   top: 10rem;
 }
 
+  >img {
+    width: 35rem;
+    height: 40rem;
+    transform:rotate(-40deg);
+    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.493));
 
+    @media screen and (max-width: 768px) {
+      width: 20rem;
+      height: 30rem;
+    }
+}
+  
+}
