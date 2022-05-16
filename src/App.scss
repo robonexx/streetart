@@ -273,14 +273,31 @@ z-index: 5;
       padding: 0 2rem;
     .row {
       display: flex;
+      text-align: left;
       flex-direction: column;
-      justify-content: space-evenly;
+      justify-content: center;
       align-items: flex-start;
       h2 {
+        font-family: 'Londrina Outline', cursive;
         font-size: 28px;
-        text-shadow: 2px 2px 2px black;
+        color: black;
+        filter: drop-shadow(1px 1px 1px black);
+
+        &:first-child:before {
+          content: 'TERMINALEN!';
+          position: absolute;
+          top: -25px;
+          left: -1px;
+        }
+        &:first-child:after {
+          content: 'TERMINALEN!';
+          position: absolute;
+          top:-50px;
+          left: 150px;
+        }
       }
       p {
+        color: black;
         font-family: "Roboto Flex";
         font-size: 16;
         line-height: 28px;

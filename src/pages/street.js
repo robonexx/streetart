@@ -98,14 +98,15 @@ const Street = ({ imageDetails }) => {
       <div className='detailed-information'>
         <div className='container'>
           <div className='row'>
-            <h2 className='title'>
-              The artwork! & <br /> what its about.
+            <h2>
+              TERMINALEN! <br />
             </h2>
             <p>
-              Event info! Lorem ipsum dolor sit amet consectetur adipisicing
-              elit. Quas aliquid minima sequi, esse pariatur quasi excepturi
-              asperiores repellendus amet molestias!
+              SLUSSEN <br />
+              STADSGÅRDSTEMINALEN <br />
+              116 45 STOCKHOLM
             </p>
+            <h2>7-12E JUNI 2022</h2>
           </div>
         </div>
       </div>
