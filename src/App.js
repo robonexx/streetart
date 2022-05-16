@@ -97,35 +97,35 @@ const InfoCont = () => {
 };
 
 function App() {
-  const imageDetails = {
-    width: 524,
-    height: 650,
-  };
+ 
+ const imageDetails = {
+      width: '100%',
+      height: '100%',
+    };
+  
   return (
     <div className='App'>
-      <Router>
-        <AnimateSharedLayout type='crossfade'>
-          <Banner />
-          <Route
-            render={({ location }) => (
-              <AnimatePresence initial={false} exitBeforeEnter>
-                <Switch location={location} key={location.pathname}>
-                  <Route
-                    exact
-                    path='/'
-                    render={() => <Home imageDetails={imageDetails} />}
-                  />
-                  <Route
-                    exact
-                    path='/street/:id'
-                    render={() => <Street imageDetails={imageDetails} />}
-                  />
-                </Switch>
-              </AnimatePresence>
-            )}
-          />
-        </AnimateSharedLayout>
-      </Router>
+      <AnimateSharedLayout type='crossfade'>
+        <Banner />
+        <Route
+          render={({ location }) => (
+            <AnimatePresence initial={false} exitBeforeEnter>
+              <Switch location={location} key={location.pathname}>
+                <Route
+                  exact
+                  path='/'
+                  render={() => <Home imageDetails={imageDetails} />}
+                />
+                <Route
+                  exact
+                  path='/street/:id'
+                  render={() => <Street imageDetails={imageDetails} />}
+                />
+              </Switch>
+            </AnimatePresence>
+          )}
+        />
+      </AnimateSharedLayout>
     </div>
   );
 }

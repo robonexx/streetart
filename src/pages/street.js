@@ -6,34 +6,6 @@ import { motion, useViewportScroll, useTransform } from 'framer-motion';
 //Ease
 const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 
-const firstName = {
-  initial: {
-    y: 0,
-  },
-  animate: {
-    y: 0,
-    transition: {
-      delayChildren: 0.6,
-      staggerChildren: 0.04,
-      staggerDirection: -1,
-    },
-  },
-};
-
-const lastName = {
-  initial: {
-    y: 0,
-  },
-  animate: {
-    y: 0,
-    transition: {
-      delayChildren: 0.6,
-      staggerChildren: 0.04,
-      staggerDirection: 1,
-    },
-  },
-};
-
 const letter = {
   initial: {
     y: 400,
@@ -76,7 +48,7 @@ const Street = ({ imageDetails }) => {
                 y: 0,
                 transition: { delay: 1.2, ...transition },
               }}
-              className='details'
+              className='information'
             >
               <div className='location'>
                 <span>59.31970553447133</span>
@@ -90,15 +62,14 @@ const Street = ({ imageDetails }) => {
             <motion.div className='image-container-single'>
               <motion.div
                 initial={{
-                  y: '20%',
-                
+                  y: 0,
                   width: imageDetails.width,
                   height: imageDetails.height,
                 }}
                 animate={{
                   y: 0,
-                  width: '100%',
-                  height: window.innerWidth > 1440 ? 800 : 400,
+                  width: '60%',
+                  height: 0,
                   transition: { delay: 0.2, ...transition },
                 }}
                 className='thumbnail-single'
@@ -112,10 +83,10 @@ const Street = ({ imageDetails }) => {
                     src={require('../images/StreetArtMarket.JPG')}
                     alt='an image'
                     style={{ scale: scale }}
-                    initial={{ scale: 1.0 }}
+                    initial={{ scale: 0.6 }}
                     animate={{
                       transition: { delay: 0.2, ...transition },
-                      y: window.innerWidth > 1440 ? -1200 : -600,
+                      y: 0,
                     }}
                   />
                 </motion.div>

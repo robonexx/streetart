@@ -13,7 +13,7 @@
 }
 
 body {
-  max-width: 100%;
+  width: 100%;
   min-height: 100vh;
   padding: 0;
   margin: 0;
@@ -21,7 +21,7 @@ body {
   overflow-x: hidden;
 
   &:before {
-    animation: grain 12s steps(30) infinite;
+    animation: grain 12s steps(40) infinite;
    background-image: url('./images/StreetArtMarket.JPG');
     content: "";
     height: 200%;
@@ -30,16 +30,15 @@ body {
     position: fixed;
     top: -50%;
     width: 200%;
+    overflow-x: hidden;
 
     @media (max-width: 768px) {
       position: absolute;
       max-width: 100vw;
       top: 40%;
       left: 0;
+      overflow-x: hidden;
      }
-  }
-  &.no-scroll {
-    overflow-y: hidden;
   }
 }
 
