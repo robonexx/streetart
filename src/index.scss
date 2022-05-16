@@ -11,6 +11,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
+ 
 }
 
 body {
@@ -19,7 +20,6 @@ body {
   padding: 0;
   margin: 0;
   background-color: #fb3d00;
-  overflow-x: hidden;
 
   &:before {
     animation: grain 12s steps(40) infinite;
@@ -31,14 +31,13 @@ body {
     position: fixed;
     top: -50%;
     width: 200%;
-    overflow-x: hidden;
 
     @media (max-width: 768px) {
       position: absolute;
       max-width: 100vw;
       top: 40%;
       left: 0;
-      overflow-x: hidden;
+      
      }
   }
 }
