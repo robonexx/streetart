@@ -1,17 +1,84 @@
+import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 import NamesList from './NamesList';
 import SprayC from './images/spraycan.png';
 import SprayB from './images/spray2.png';
 import Spray from './components/Spray';
 import NamesItem from './NamesItem';
 import { AnimatePresence, AnimateSharedLayout } from 'framer-motion';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Switch, Route, useLocation } from 'react-router-dom';
 import Home from './pages/home';
 import Street from './pages/street';
 import Banner from './components/Banner';
+import Loader from './components/Loader';
 
 //styles
 import './App.scss';
 import './sass/main.scss';
+
+function App() {
+  const [loading, setLoading] = useState(true);
+  const location = useLocation();
+
+  const imageDetails = {
+    width: '100%',
+    height: '100%',
+  };
+
+  useEffect(() => {
+    loading
+      ? document.querySelector('body').classList.add('loading')
+      : document.querySelector('body').classList.remove('loading');
+  }, [loading]);
+
+  return (
+    <div className='App'>
+      <AnimateSharedLayout type='crossfade'>
+        <AnimatePresence initial={false} exitBeforeEnter>
+          {loading ? (
+            <motion.div key='loader'>
+              <Loader setLoading={setLoading} />
+            </motion.div>
+          ) : (
+            <>
+              <Banner />
+              {!loading && (
+                <div className='transition-image final'>
+                  <motion.img
+                    transition={{
+                      ease: [0.6, 0.01, -0.05, 0.9],
+                      duration: 1.6,
+                    }}
+                    src={process.env.PUBLIC_URL + `/images/image-2.jpg`}
+                    layoutId='main-image-1'
+                  />
+                </div>
+              )}
+              <Route
+                render={({ location }) => (
+                  <Switch location={location} key={location.pathname}>
+                    <Route
+                      exact
+                      path='/'
+                      render={() => <Home imageDetails={imageDetails} />}
+                    />
+                    <Route
+                      exact
+                      path='/street/:id'
+                      render={() => <Street imageDetails={imageDetails} />}
+                    />
+                  </Switch>
+                )}
+              />
+            </>
+          )}
+        </AnimatePresence>
+      </AnimateSharedLayout>
+    </div>
+  );
+}
+
+export default App;
 
 const streetList = () => {
   return (
@@ -95,39 +162,3 @@ const InfoCont = () => {
     </div>
   );
 };
-
-function App() {
- 
- const imageDetails = {
-      width: '100%',
-      height: '100%',
-    };
-  
-  return (
-    <div className='App'>
-      <AnimateSharedLayout type='crossfade'>
-        <Banner />
-        <Route
-          render={({ location }) => (
-            <AnimatePresence initial={false} exitBeforeEnter>
-              <Switch location={location} key={location.pathname}>
-                <Route
-                  exact
-                  path='/'
-                  render={() => <Home imageDetails={imageDetails} />}
-                />
-                <Route
-                  exact
-                  path='/street/:id'
-                  render={() => <Street imageDetails={imageDetails} />}
-                />
-              </Switch>
-            </AnimatePresence>
-          )}
-        />
-      </AnimateSharedLayout>
-    </div>
-  );
-}
-
-export default App;
