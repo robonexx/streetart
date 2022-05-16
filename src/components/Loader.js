@@ -1,7 +1,6 @@
-import React from "react";
-import { motion } from "framer-motion";
-
-import Image from "./Image";
+import React, { useEffect } from 'react';
+import { motion } from 'framer-motion';
+import Image from './Image';
 
 // Import images
 
@@ -27,7 +26,7 @@ const item = {
     opacity: 0,
     y: -200,
     transition: {
-      ease: "easeInOut",
+      ease: 'easeInOut',
       duration: 0.8,
     },
   },
@@ -46,26 +45,32 @@ const itemMain = {
 };
 
 const Loader = ({ setLoading }) => {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3500);
+    return () => clearTimeout(timer);
+  }, []);
   return (
-    <motion.div className="loader">
+    <motion.div className='loader'>
       <motion.div
         variants={container}
         onAnimationComplete={() => setLoading(false)}
-        initial="hidden"
-        animate="show"
-        exit="exit"
-        className="loader-inner"
+        initial='hidden'
+        animate='show'
+        exit='exit'
+        className='loader-inner'
       >
-        <ImageBlock variants={item} id="image-1" />
-        <motion.div variants={itemMain} className="transition-image">
+        <ImageBlock variants={item} id='image-1' />
+        <motion.div variants={itemMain} className='transition-image'>
           <motion.img
-            layoutId="main-image-2"
-            src={`/images/image-2.jpg`}
+            layoutId='main-image-1'
+            src={process.env.PUBLIC_URL + `/images/image-1.JPG`}
           />
         </motion.div>
-        <ImageBlock variants={item} id="image-3" />
-        <ImageBlock variants={item} id="image-4" />
-        <ImageBlock variants={item} id="image-5" />
+        <ImageBlock variants={item} id='image-3' />
+        <ImageBlock variants={item} id='image-4' />
+        <ImageBlock variants={item} id='image-5' />
       </motion.div>
     </motion.div>
   );
