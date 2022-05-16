@@ -11,12 +11,13 @@ import Home from './pages/home';
 import Street from './pages/street';
 import Banner from './components/Banner';
 import Loader from './components/Loader';
+import Cursor from './components/Cursor/Cursor';
 
 //styles
 import './App.scss';
 import './sass/main.scss';
 
-function App() {
+function App({ cursor }) {
   const [loading, setLoading] = useState(true);
   const location = useLocation();
 
@@ -33,6 +34,17 @@ function App() {
 
   return (
     <div className='App'>
+      {window.innerWidth > 768 ? (
+        <Cursor
+          cursor={cursor}
+          onMouseMove={(e) => {
+            const cursor = document.querySelector('.cursor');
+            cursor.style.left = `${e.pageX}px`;
+            cursor.style.top = `${e.pageY}px`;
+          }}
+        />
+      ) : null}
+
       <AnimateSharedLayout type='crossfade'>
         <AnimatePresence initial={false} exitBeforeEnter>
           {loading ? (
@@ -55,7 +67,7 @@ function App() {
                 </div>
               )}
               <Route
-                render={({ location }) => (
+                render={() => (
                   <Switch location={location} key={location.pathname}>
                     <Route
                       exact
