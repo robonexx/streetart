@@ -1,8 +1,10 @@
 
 .banner {
+  position: absolute;
   z-index: 100;
   font-family: 'Roboto Flex', sans-serif;
   position: relative;
+  z-index: 10;
   .banner-row {
     overflow: hidden;
     display: flex;
