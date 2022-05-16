@@ -80,7 +80,7 @@ const BannerRowTop = ({ title }) => {
           <h3>BURGERS</h3>
           <h3>BEER &</h3>
           <h3>BREAKDANCE</h3>
-          <h3>OVER 100SQM</h3>
+          <h3>OVER 1000SQM</h3>
         </span>
       </motion.div>
     </div>
