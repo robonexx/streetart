@@ -215,16 +215,14 @@ z-index: 5;
         right: auto;
        }
       .bottom {
-        
+              
         .thumbnail-single {
-          
           margin: 0 auto;
           .frame-single {
-            position: fixed;
+            position: absolute;
             left: 0;
-            top: 40vh;
+              top: 0;
               width: 80%;
-              height: 0;
            
             @media (max-width: 768px) {
               top: 60vh;
@@ -235,8 +233,8 @@ z-index: 5;
              }
             img {
               width: 90vw;
-              padding: 10rem;
-              pointer-events: none;
+              padding: 0 10rem;
+             
               @media (max-width: 768px) {
                 width: 60vw;
                 padding: 2rem;

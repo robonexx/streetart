@@ -86,7 +86,7 @@ const Street = ({ imageDetails }) => {
                     initial={{ scale: 0.6 }}
                     animate={{
                       transition: { delay: 0.2, ...transition },
-                      y: 0,
+                      y: -500,
                     }}
                   />
                 </motion.div>

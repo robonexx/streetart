@@ -6,13 +6,14 @@
     border-radius: 100%;
     position: fixed;
     transform: translate(-50%, -50%);
-    /* pointer-events: none; */
+    pointer-events: none;
     z-index: 9999;
     mix-blend-mode: difference;
-    /* background-image: url('./cursor.png'); */
+    background-image: url('./cursor.png');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 100%;
     object-fit: cover;
+    
   }
   
