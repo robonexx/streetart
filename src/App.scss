@@ -147,13 +147,13 @@ z-index: 5;
           overflow: hidden;
           position: relative;
           .frame {
-
             h2 {
               font-family: 'Roboto Flex';
               font-weight: 800;
               font-size: 2rem;
             }
             img {
+              margin: 0 auto;
               transform-origin: top;
               width:60%;
               max-height: 80%;
