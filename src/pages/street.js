@@ -46,7 +46,7 @@ const Street = ({ imageDetails }) => {
             </h2>
             <p>
               SLUSSEN <br />
-              STADSGÅRDSTEMINALEN <br />
+              STADSGÅRDST3RMINAL3N <br />
               116 45 STOCKHOLM
             </p>
             <h2>7-12E JUNI 2022</h2>
