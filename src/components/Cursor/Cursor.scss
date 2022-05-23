@@ -12,8 +12,13 @@
     background-image: url('./cursor.png');
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 100%;
+    background-size: 60%;
     object-fit: cover;
+
+    img {
+      width: 80%;
+      height: 80%;
+    }
     
   }
   

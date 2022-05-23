@@ -38,6 +38,21 @@ const Street = ({ imageDetails }) => {
       animate='animate'
       exit='exit'
     >
+       <div className='detailed-information'>
+        <div className='container'>
+          <div className='row'>
+            <h2>
+              TERMINALEN! <br />
+            </h2>
+            <p>
+              SLUSSEN <br />
+              STADSGÅRDSTEMINALEN <br />
+              116 45 STOCKHOLM
+            </p>
+            <h2>7-12E JUNI 2022</h2>
+          </div>
+        </div>
+      </div>
       <div className='container fluid'>
         <div className='row center top-row'>
           <div className='top'>
@@ -95,21 +110,7 @@ const Street = ({ imageDetails }) => {
           </div>
         </div>
       </div>
-      <div className='detailed-information'>
-        <div className='container'>
-          <div className='row'>
-            <h2>
-              TERMINALEN! <br />
-            </h2>
-            <p>
-              SLUSSEN <br />
-              STADSGÅRDSTEMINALEN <br />
-              116 45 STOCKHOLM
-            </p>
-            <h2>7-12E JUNI 2022</h2>
-          </div>
-        </div>
-      </div>
+     
     </motion.div>
   );
 };

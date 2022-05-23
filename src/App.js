@@ -92,53 +92,7 @@ function App({ cursor }) {
 
 export default App;
 
-const streetList = () => {
-  return (
-    <div className='mid-lists'>
-      <div className='street-list'>
-        <li>
-          <h3>StreetArtMarket</h3>
-        </li>
-        <li>
-          <h3>StreetArtMarket</h3>
-        </li>
-        <li>
-          <h3>StreetArtMarket</h3>
-        </li>
-        <li>
-          <h3>StreetArtMarket</h3>
-        </li>
-        <li>
-          <h3>StreetArtMarket</h3>
-        </li>
-      </div>
-      <div className='logo'>
-        <img src={SprayB} alt='' />
-      </div>
 
-      <div className='street-list'>
-        <li>
-          <h3>StreetArtMarket</h3>
-        </li>
-        <li>
-          <h3>StreetArtMarket</h3>
-        </li>
-        <li>
-          <h3>StreetArtMarket</h3>
-        </li>
-        <li>
-          <h3>StreetArtMarket</h3>
-        </li>
-        <li>
-          <h3>StreetArtMarket</h3>
-        </li>
-        <li>
-          <h3>StreetArtMarket</h3>
-        </li>
-      </div>
-    </div>
-  );
-};
 
 const NameLi = () => {
   return (
@@ -162,7 +116,7 @@ const NameLi = () => {
     </>
   );
 };
-
+/* 
 const InfoCont = () => {
   return (
     <div className='info-container'>
@@ -174,3 +128,4 @@ const InfoCont = () => {
     </div>
   );
 };
+ */
