@@ -15,11 +15,13 @@
 }
 
 body {
-  width: 100%;
-  min-height: 100vh;
   padding: 0;
   margin: 0;
   background-color: #fb3d00;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+
 
   &:before {
     animation: grain 12s steps(40) infinite;

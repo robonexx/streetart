@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { motion, useViewportScroll, useTransform } from 'framer-motion';
+import { nameList } from '../Data';
 
-//Components
+// style for list
+import '../list.scss'
 
 //Ease
 const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
@@ -38,7 +40,7 @@ const Street = ({ imageDetails }) => {
       animate='animate'
       exit='exit'
     >
-       <div className='detailed-information'>
+      <div className='detailed-information'>
         <div className='container'>
           <div className='row'>
             <h2>
@@ -75,7 +77,7 @@ const Street = ({ imageDetails }) => {
         <div className='row bottom-row'>
           <div className='bottom'>
             <motion.div className='image-container-single'>
-              <motion.div
+         {/*      <motion.div
                 initial={{
                   y: 0,
                   width: imageDetails.width,
@@ -105,14 +107,30 @@ const Street = ({ imageDetails }) => {
                     }}
                   />
                 </motion.div>
-              </motion.div>
+              </motion.div> */}
             </motion.div>
           </div>
         </div>
+        <NameLi />
       </div>
-     
     </motion.div>
   );
 };
 
 export default Street;
+
+const NameLi = () => {
+  return (
+    <>
+      <div className='names-array'>
+        <ul>
+          {nameList.map((i) => (
+            <li kye={i} className='name-item'>
+              <h4 className='name'>{i}</h4>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </>
+  );
+};

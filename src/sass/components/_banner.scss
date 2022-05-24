@@ -1,34 +1,43 @@
 
 .banner {
-  position: absolute;
+  position: relative;
+  height: 100vh;
   z-index: 100;
   font-family: 'Roboto Flex', sans-serif;
   position: relative;
   z-index: 10;
+  overflow: hidden;
+
   .banner-row {
     overflow: hidden;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
     padding: 2rem 4rem;
+
+   @media screen and (max-width) {
+     width: 100vw;
+     overflow: hidden;
+   }
     
 
-    @media (max-width: $layout-breakpoint-medium) {
+    @media (max-width: 768px) {
       &:first-child {
         margin-top: 48px;
         padding: 1rem 0;
       }
     }
     &.center {
-      position: relative;
-      justify-content: flex-start;
+      position: fixed;
+      bottom: 10%;
       text-align: center;
       font-family: 'Londrina Outline', cursive;
       cursor: pointer;
       opacity: 0.7;
-      @media (max-width: $layout-breakpoint-medium) {
-       position: absolute;
-       top: 50vh;
+
+      @media screen and (max-width: 960px) {
+       top: 50%;
+       bottom: 0%;
        left: -3rem;
        transform: rotate(10deg);
       }
@@ -45,7 +54,6 @@
         left: 3rem;
 
         @media screen and (max-width: 768px) {
-          top: 5rem;
           font-size: 5rem;
         }
       }
@@ -55,7 +63,7 @@
       }
     }
     &.right {
-      justify-content: flex-end;
+      justify-content: flex-start;
     }
 
     .row-title {
@@ -86,7 +94,7 @@
       }
     }
     .row-col {
-      width: 90%;
+      width: 100%;
       height: 500px;
       display: flex;
       align-content: center;
@@ -105,7 +113,7 @@
         padding-top: 10rem;
         padding-left: 5rem;
         padding-right: 5rem;
-        margin-right: 5rem;
+        margin-right: 1rem;
         font-size: 1.8rem;
         line-height: 4rem;
         width: 320px;
@@ -125,10 +133,9 @@
         }
         @media (max-width: $layout-breakpoint-xsmall) {
           position: absolute;
-          right: 2rem;
+          right: 1rem;
           margin-right: 0;
-          padding-right: 1rem;
-          padding-left: 0rem;
+          padding-top: 10rem;
         }
 
 
@@ -164,7 +171,7 @@
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      left: 160px;
+      overflow-x: hidden;
       @media (max-width: $layout-breakpoint-medium) {
         left: 60px;
       }

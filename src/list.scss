@@ -1,18 +1,14 @@
+.names-array {
+   position: fixed;
+   left: 40%;
+    max-width: 600px;
+    z-index: 200;
 
-.nameList {
-    position: relative;
-    margin: 0 auto;
-    list-style-type: none;
-    z-index: 10;
-    width: fit-content;
-  }
 
-.name {
-    width: inherit;
-    padding: 0.25rem 0;
-    background: transparent;
-    > h4 {
-        font-family: 'Roboto Flex', sans-serif;
-        color: black;
+    .name-item {
+
+        .name {
+
+        }
     }
 }

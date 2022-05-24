@@ -1,10 +1,5 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import NamesList from './NamesList';
-import SprayC from './images/spraycan.png';
-import SprayB from './images/spray2.png';
-import Spray from './components/Spray';
-import NamesItem from './NamesItem';
 import { AnimatePresence, AnimateSharedLayout } from 'framer-motion';
 import { Switch, Route, useLocation } from 'react-router-dom';
 import Home from './pages/home';
@@ -12,6 +7,7 @@ import Street from './pages/street';
 import Banner from './components/Banner';
 import Loader from './components/Loader';
 import Cursor from './components/Cursor/Cursor';
+
 
 //styles
 import './App.scss';
@@ -92,40 +88,3 @@ function App({ cursor }) {
 
 export default App;
 
-
-
-const NameLi = () => {
-  return (
-    <>
-      <div className='names-array'>
-        <NamesList>
-          <NamesItem name='olle' />
-          <NamesItem name='bertil' />
-          <NamesItem name='arne' />
-          <NamesItem name='02' />
-          <NamesItem name='spray ya date' />
-          <NamesItem name='predator the crayz' />
-          <NamesItem name='Rupert the moz' />
-          <NamesItem name='Apa the mapa' />
-          <NamesItem name='Zues' />
-          <NamesItem name='Yes' />
-          <NamesItem name='No' />
-          <NamesItem name='Numpsy' />
-        </NamesList>
-      </div>
-    </>
-  );
-};
-/* 
-const InfoCont = () => {
-  return (
-    <div className='info-container'>
-      <h2>DJ's</h2>
-      <h2>Talks</h2>
-      <h2>Burgers</h2>
-      <h2>Beer &</h2>
-      <h2>Breakdance</h2>
-    </div>
-  );
-};
- */

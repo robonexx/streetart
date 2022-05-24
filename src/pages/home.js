@@ -32,7 +32,7 @@ const Home = ({ imageDetails, image }) => (
                       <motion.img
                         src={src}
                         alt='Street art'
-                        whileHover={{ scale: 0.55 }}
+                        whileHover={{ scale: 0.45 }}
                         transition={transition}
                       />
                     )}
