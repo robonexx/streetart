@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { motion, useViewportScroll, useTransform } from 'framer-motion';
-import { nameList } from '../Data';
+import React, { useEffect, useState } from "react";
+import { motion, useViewportScroll, useTransform } from "framer-motion";
+import { nameList } from "../Data";
+import ticket from "../images/Untitled-Artwork.png";
 
 // style for list
-import '../list.scss'
+import "../list.scss";
 
 //Ease
 const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
@@ -26,23 +27,26 @@ const Street = ({ imageDetails }) => {
 
   useEffect(() => {
     if (canScroll === false) {
-      document.querySelector('body').classList.add('no-scroll');
+      document.querySelector("body").classList.add("no-scroll");
     } else {
-      document.querySelector('body').classList.remove('no-scroll');
+      document.querySelector("body").classList.remove("no-scroll");
     }
   }, [canScroll]);
 
   return (
     <motion.div
       onAnimationComplete={() => setCanScroll(true)}
-      className='single'
-      initial='initial'
-      animate='animate'
-      exit='exit'
+      className="single"
+      initial="initial"
+      animate="animate"
+      exit="exit"
     >
-      <div className='detailed-information'>
-        <div className='container'>
-          <div className='row'>
+      <div className="detailed-information">
+        <a href="https://billetto.se/e/streetartmarket-biljetter-641184">
+          <img src={ticket} alt="buy-ticket-logo" className="ticket-logo" />
+        </a>
+        <div className="container">
+          <div className="row">
             <h2>
               TERMINALEN! <br />
             </h2>
@@ -55,9 +59,9 @@ const Street = ({ imageDetails }) => {
           </div>
         </div>
       </div>
-      <div className='container fluid'>
-        <div className='row center top-row'>
-          <div className='top'>
+      <div className="container fluid">
+        <div className="row center top-row">
+          <div className="top">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{
@@ -65,19 +69,19 @@ const Street = ({ imageDetails }) => {
                 y: 0,
                 transition: { delay: 1.2, ...transition },
               }}
-              className='information'
+              className="information"
             >
-              <div className='location'>
+              <div className="location">
                 <span>59.31970553447133</span>
                 <span>18.07761179651022</span>
               </div>
             </motion.div>
           </div>
         </div>
-        <div className='row bottom-row'>
-          <div className='bottom'>
-            <motion.div className='image-container-single'>
-         {/*      <motion.div
+        <div className="row bottom-row">
+          <div className="bottom">
+            <motion.div className="image-container-single">
+              {/*      <motion.div
                 initial={{
                   y: 0,
                   width: imageDetails.width,
@@ -122,11 +126,11 @@ export default Street;
 const NameLi = () => {
   return (
     <>
-      <div className='names-array'>
+      <div className="names-array">
         <ul>
           {nameList.map((i) => (
-            <li kye={i} className='name-item'>
-              <h4 className='name'>{i}</h4>
+            <li kye={i} className="name-item">
+              <h4 className="name">{i}</h4>
             </li>
           ))}
         </ul>
