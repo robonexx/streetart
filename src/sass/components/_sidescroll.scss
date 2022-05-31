@@ -3,12 +3,9 @@ $move-final: calc(-50%);
 
 .sideScroll {
   position: absolute;
-  top: 70%;
+  top: 80%;
   overflow: hidden;
 
-  @media (min-width: $layout-breakpoint-medium) {
-   top: 80%;
-  }
 
 
   &.animate .sideScroll__inner {
@@ -21,12 +18,6 @@ $move-final: calc(-50%);
     transform: translate3d($move-initial, 0, 0);
     animation: sideScroll 5s linear infinite;
     animation-play-state: paused;
-
-    @media (min-width: $layout-breakpoint-large) {
-      transform: translate3d(calc(-25% + 10vw), 0, 0);
-      animation: sideScroll-lg 5s linear infinite;
-      animation-play-state: paused;
-    }
   }
   .row-title {
     padding: 0 8vw;
@@ -42,8 +33,8 @@ $move-final: calc(-50%);
   (max-width: 1024px) and 
   (min-resolution: 192dpi) {
     position: fixed;
-    top: 50%;
-    bottom: 20%;
+    top: 75%;
+    bottom: 0%;
 
 }
 }
