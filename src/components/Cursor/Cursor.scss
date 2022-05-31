@@ -19,6 +19,12 @@
       width: 80%;
       height: 80%;
     }
+
+    @media (min-width: 769px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2),
+    (min-width: 769px) and (max-width: 1024px) and (min-resolution: 192dpi) {
+      visibility: hidden;
+    }
+
     
   }
   
