@@ -300,12 +300,21 @@ main {
 // information terminalen/ event
 .detailed-information {
   position: fixed;
-  top: 40%;
+  top: 35%;
   left: 20vw;
   padding: 0;
   height: 600px;
   width: fit-content;
   z-index: 1000;
+
+  @media (max-width: 1440px) {
+    top: 30%;
+    left: 5vw;
+  }
+  @media (max-width: 1220px) {
+    top: 35%;
+    left: 5vw;
+  }
 
   @media (min-width: 769px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2),
     (min-width: 769px) and (max-width: 1024px) and (min-resolution: 192dpi) {
@@ -319,39 +328,42 @@ main {
   }
 
   @media (max-width: 660px) {
-    left: 2%;
-    top: 25%;
+    left: 0%;
+    top: 35%;
     z-index: 1000;
   }
 
   .ticket-logo {
     position: fixed;
+    z-index: 1;
     top: 25%;
-    left: 0.5%;
-    max-width: 25rem;
-    max-height: 25rem;
+    left: 1.5%;
+    max-width: 20rem;
+    max-height: 20rem;
     transform: rotate(15deg);
+    transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
 
-    @media (max-width: 1180px) {
+    @media (max-width: 1440px) {
       position: fixed;
-      top: 45%;
-      left: 65%;
+      top: 10%;
+      left: 45%;
       max-width: 25rem;
       max-height: 25rem;
     }
 
     @media (max-width: 1024px) {
       position: fixed;
-      top: 58%;
+      top: 8%;
       left: 55%;
-      max-width: 25rem;
-      max-height: 25rem;
+      max-width: 20rem;
+      max-height: 20rem;
     }
 
     @media (max-width: 768px) {
       position: fixed;
-      top: 40%;
-      left: 50%;
+      top: 5%;
+      left: auto;
+      right: 5%;
       max-width: 20rem;
       max-height: 20rem;
     }
@@ -410,12 +422,21 @@ main {
         color: rgb(0, 0, 0);
         text-shadow: 1px 1px 1px #fb3d00;
         font-family: "Roboto Flex";
-        font-size: 2rem;
-        line-height: 28px;
+        font-size: 3rem;
+        line-height: 3rem;
         font-weight: 800;
         max-width: 800px;
+
+        @media (max-width: 1440px) {
+          font-size: 2.5rem;
+          text-shadow: 2px 4px 1px #fb3d00;
+        }
+
         @media (max-width: 768px) {
-          font-size: 1.2rem;
+          font-size: 1.6rem;
+          line-height: 1.5rem;
+          letter-spacing: 1px;
+          text-shadow: 2px 2px 2px #fb3d00;
         }
       }
     }
