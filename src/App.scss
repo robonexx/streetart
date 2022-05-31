@@ -190,6 +190,17 @@ main {
             img {
               width: 60%;
               max-height: 80%;
+              transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+              
+              &:hover {
+                transform: scale(0.6) translateY(-350px);
+
+                @media (max-width: 960px) {
+                  transform: scale(0.75) translateY(0px);
+
+                }
+
+              }
             }
           }
         }
