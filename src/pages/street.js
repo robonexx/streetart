@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
 import { nameList } from "../Data";
-import ticket from "../images/Untitled-Artwork.png";
+import ticket from "../images/more-info.png";
 
 // style for list
 import "../list.scss";
